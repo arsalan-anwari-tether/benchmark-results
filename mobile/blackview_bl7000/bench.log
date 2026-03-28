@@ -1,0 +1,84 @@
+nohup: ignoring input
+==> cpu: Qwen3-1.7B-Q4_K_M.gguf (ngl=0) -> Qwen3-1.7B-Q4_K_M_cpu.json
+ggml_vulkan: WARNING: Instance extension VK_EXT_debug_utils not found.
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G57 MC2 (Mali-G57 MC2) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: none
+==> vulkan: Qwen3-1.7B-Q4_K_M.gguf (ngl=999) -> Qwen3-1.7B-Q4_K_M_vulkan.json
+ggml_vulkan: WARNING: Instance extension VK_EXT_debug_utils not found.
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G57 MC2 (Mali-G57 MC2) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: none
+==> logic cpu think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu no_think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu no_think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu no_think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> cpu: Qwen3-4B-Q4_K_M.gguf (ngl=0) -> Qwen3-4B-Q4_K_M_cpu.json
+ggml_vulkan: WARNING: Instance extension VK_EXT_debug_utils not found.
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G57 MC2 (Mali-G57 MC2) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: none
+==> vulkan: Qwen3-4B-Q4_K_M.gguf (ngl=999) -> Qwen3-4B-Q4_K_M_vulkan.json
+ggml_vulkan: WARNING: Instance extension VK_EXT_debug_utils not found.
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G57 MC2 (Mali-G57 MC2) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: none
+==> logic cpu think Question-1: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu think Question-2: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu think Question-3: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-1: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-2: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-3: Qwen3-4B-Q4_K_M.gguf
+==> logic vulkan think Question-1: Qwen3-4B-Q4_K_M.gguf
+nohup: ignoring input
+==> cpu: Qwen3-1.7B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/blackview_bl7000/inference/Qwen3-1.7B-Q4_K_M/cpu.json
+ggml_vulkan: WARNING: Instance extension VK_EXT_debug_utils not found.
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G57 MC2 (Mali-G57 MC2) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: none
+==> vulkan: Qwen3-1.7B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/blackview_bl7000/inference/Qwen3-1.7B-Q4_K_M/vulkan.json
+ggml_vulkan: WARNING: Instance extension VK_EXT_debug_utils not found.
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G57 MC2 (Mali-G57 MC2) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: none
+==> logic cpu think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu no_think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu no_think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu no_think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> cpu: Qwen3-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/blackview_bl7000/inference/Qwen3-4B-Q4_K_M/cpu.json
+ggml_vulkan: WARNING: Instance extension VK_EXT_debug_utils not found.
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G57 MC2 (Mali-G57 MC2) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: none
+==> vulkan: Qwen3-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/blackview_bl7000/inference/Qwen3-4B-Q4_K_M/vulkan.json
+ggml_vulkan: WARNING: Instance extension VK_EXT_debug_utils not found.
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G57 MC2 (Mali-G57 MC2) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: none
+==> logic cpu think Question-1: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu think Question-2: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu think Question-3: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-1: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-2: Qwen3-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-3: Qwen3-4B-Q4_K_M.gguf
+==> logic vulkan think Question-1: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for /data/data/com.termux/files/home/models/Qwen3-4B-Q4_K_M.gguf (vulkan think Q1) after 300s
+==> logic vulkan think Question-2: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for /data/data/com.termux/files/home/models/Qwen3-4B-Q4_K_M.gguf (vulkan think Q2) after 300s
+==> logic vulkan think Question-3: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for /data/data/com.termux/files/home/models/Qwen3-4B-Q4_K_M.gguf (vulkan think Q3) after 300s
+==> logic vulkan no_think Question-1: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for /data/data/com.termux/files/home/models/Qwen3-4B-Q4_K_M.gguf (vulkan no_think Q1) after 300s
+==> logic vulkan no_think Question-2: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for /data/data/com.termux/files/home/models/Qwen3-4B-Q4_K_M.gguf (vulkan no_think Q2) after 300s
+==> logic vulkan no_think Question-3: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for /data/data/com.termux/files/home/models/Qwen3-4B-Q4_K_M.gguf (vulkan no_think Q3) after 300s
+done with 6 failing run(s).

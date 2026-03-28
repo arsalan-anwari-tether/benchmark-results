@@ -7,15 +7,19 @@
 | **llama-cli** | `/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli` |
 | **llama-cli version** |  |
 | **Model file** | `Qwen3-1.7B-Q4_K_M.gguf` |
-| **Backend** | cpu (`ngl=0`) |
+| **Backend** | cpu |
+| **Device selection** | `--device none` |
+| **GPU layers** | `-ngl 0` |
 | **Thinking mode** | `no_think` (`--reasoning-budget 0`) |
 | **Max new tokens** | `-n 512` |
+| **Sampling flags** | `--temp 0.2 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.05 --presence-penalty 0.0` |
+| **Per-question timeout** | `300s` |
 | **Chat** | `--jinja`, `--single-turn` (each question: `-p` …) |
 
 ## Command line (same for every question; only `-p` changes)
 
 ````bash
-/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli -m /data/data/com.termux/files/home/models/Qwen3-1.7B-Q4_K_M.gguf --jinja --reasoning-budget 0 -ngl 0 -st -p \<prompt\> -n 512 --temp 0.5 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.10 --presence-penalty 0.3  </dev/null
+/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli -m /data/data/com.termux/files/home/models/Qwen3-1.7B-Q4_K_M.gguf --jinja --device none --reasoning-budget 0 -ngl 0 -st -p \<prompt\> -n 512 --temp 0.2 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.05 --presence-penalty 0.0  </dev/null
 ````
 
 ---
@@ -46,18 +50,19 @@ $$
 we apply the **power rule** for derivatives, which states:
 
 $$
-\frac{d}{dx} [x^n] = n x^{n-1}
+\frac{d}{dx} x^n = n x^{n-1}
 $$
 
 ---
 
 ### Step-by-step derivative:
 
-1. Differentiate each term:
-   - $\frac{d}{dx} (x^3) = 3x^2$
-   - $\frac{d}{dx} (2x^2) = 4x$ (since $2 \cdot 2x = 4x$)
-   - $\frac{d}{dx} (-5x) = -5$
-   - $\frac{d}{dx} (3)$ = 0 (derivative of a constant is zero)
+1. Differentiate each term separately:
+
+   - $ \frac{d}{dx} x^3 = 3x^2 $
+   - $ \frac{d}{dx} 2x^2 = 4x $
+   - $ \frac{d}{dx} (-5x) = -5 $
+   - $ \frac{d}{dx} 3 = 0 $
 
 2. Combine the results:
 
@@ -92,32 +97,29 @@ assistant
 
 </think>
 
-Certainly! Here's a Python function that checks whether a given string is a **palindrome**:
+Sure! Here's a Python function that checks if a string is a palindrome:
 
 ```python
 def is_palindrome(s):
-    # Remove non-alphanumeric characters and convert to lowercase
-    cleaned = ''.join(c.lower() for c in s if c.isalnum())
-    
-    # Check if the cleaned string reads the same forward and backward
+    # Remove any non-alphanumeric characters and convert to lowercase
+    cleaned = ''.join([c.lower() for c in s if c.isalnum()])
     return cleaned == cleaned[::-1]
 ```
 
 ### Example usage:
-
 ```python
-print(is_palindrome("A man, a plan, a canal: Panama"))  # True
+print(is_palindrome("A man, a plan, a canal: Pompeii"))  # True
 print(is_palindrome("racecar"))                        # True
 print(is_palindrome("hello"))                          # False
-print(is_palindrome("RaceCar"))                         # True (after case normalization)
+print(is_palindrome("RaceCar"))                         # True (after case-insensitive and non-alphanumeric removal)
 ```
 
 ### Explanation:
 - The function removes all non-alphanumeric characters.
-- It converts the string to lowercase to make the comparison case-insensitive.
-- It checks if the cleaned string is equal to its reverse.
+- It converts the string to lowercase to make the check case-insensitive.
+- It then checks if the cleaned string is equal to its reverse.
 
-Let me know if you want a version that handles different character encodings or includes additional features! [end of text]
+Let me know if you'd like a version that handles different character encodings or includes additional features! [end of text]
 
 ````
 
@@ -141,18 +143,12 @@ assistant
 Let's break it down step by step:
 
 - The farmer starts with **17 sheep**.
-- "All but 9 run away" means that **9 sheep run away**, and the rest remain.
+- **All but 9** run away.  
+  This means **9 sheep** run away, and the rest (17 - 9 = 8) remain.
 
-So, the number of sheep remaining is:
+So, the farmer has **8 sheep left**.
 
-$$
-17 - 9 = \boxed{8}
-$$
-
-### Final Answer:
-$$
-\boxed{8}
-$$ [end of text]
+✅ **Answer: 8**. [end of text]
 
 ````
 

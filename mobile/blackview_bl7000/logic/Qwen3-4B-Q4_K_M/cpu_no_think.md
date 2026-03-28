@@ -1,3 +1,5 @@
+# Logic test: Qwen3-4B-Q4_K_M
+
 ## Run configuration
 
 | Field | Value |
@@ -5,15 +7,19 @@
 | **llama-cli** | `/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli` |
 | **llama-cli version** |  |
 | **Model file** | `Qwen3-4B-Q4_K_M.gguf` |
-| **Backend** | vulkan (`ngl=999`) |
+| **Backend** | cpu |
+| **Device selection** | `--device none` |
+| **GPU layers** | `-ngl 0` |
 | **Thinking mode** | `no_think` (`--reasoning-budget 0`) |
 | **Max new tokens** | `-n 512` |
+| **Sampling flags** | `--temp 0.2 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.05 --presence-penalty 0.0` |
+| **Per-question timeout** | `300s` |
 | **Chat** | `--jinja`, `--single-turn` (each question: `-p` …) |
 
 ## Command line (same for every question; only `-p` changes)
 
 ````bash
-/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli -m /data/data/com.termux/files/home/models/Qwen3-4B-Q4_K_M.gguf --jinja --reasoning-budget 0 -ngl 999 -st -p \<prompt\> -n 512 --temp 0.5 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.10 --presence-penalty 0.3  </dev/null
+/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli -m /data/data/com.termux/files/home/models/Qwen3-4B-Q4_K_M.gguf --jinja --device none --reasoning-budget 0 -ngl 0 -st -p \<prompt\> -n 512 --temp 0.2 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.05 --presence-penalty 0.0  </dev/null
 ````
 
 ---
@@ -41,33 +47,20 @@ $$
 f(x) = x^3 + 2x^2 - 5x + 3
 $$
 
-we apply the **power rule** for differentiation, which states that the derivative of $ x^n $ is $ nx^{n-1} $.
-
----
+we apply the **power rule** to each term individually.
 
 ### Step-by-step differentiation:
 
-1. Differentiate $ x^3 $:  
-   $$ \frac{d}{dx}(x^3) = 3x^2 $$
+1. The derivative of $ x^3 $ is $ 3x^2 $
+2. The derivative of $ 2x^2 $ is $ 4x $
+3. The derivative of $ -5x $ is $ -5 $
+4. The derivative of the constant $ 3 $ is $ 0 $
 
-2. Differentiate $ 2x^2 $:  
-   $$ \frac{d}{dx}(2x^2) = 2 \cdot 2x = 4x $$
-
-3. Differentiate $ -5x $:  
-   $$ \frac{d}{dx}(-5x) = -5 $$
-
-4. Differentiate the constant term $ +3 $:  
-   The derivative of a constant is **0**.
-
----
-
-### Combine all terms:
+### Combine the results:
 
 $$
 f'(x) = 3x^2 + 4x - 5
 $$
-
----
 
 ### ✅ Final Answer:
 $$
@@ -93,7 +86,7 @@ assistant
 
 </think>
 
-Sure! Here's a simple Python function to check if a string is a palindrome:
+Here's a simple Python function to check if a string is a palindrome:
 
 ```python
 def is_palindrome(s):
@@ -103,12 +96,14 @@ def is_palindrome(s):
 ### Explanation:
 - `s[::-1]` reverses the string.
 - The function compares the original string with its reversed version.
-- If they are equal, the string is a palindrome.
+- If they are the same, the string is a palindrome.
 
 ### Example usage:
+
 ```python
 print(is_palindrome("racecar"))  # True
 print(is_palindrome("hello"))    # False
+print(is_palindrome("madam"))    # True
 ```
 
 Let me know if you want to handle case sensitivity or non-alphanumeric characters as well! [end of text]
@@ -136,18 +131,17 @@ The riddle is a bit of a play on words.
 
 The question says:
 
-> "A farmer has 17 sheep. All but 9 run away. How many sheep does the farmer have left?"
+> A farmer has 17 sheep. All but 9 run away. How many sheep does the farmer have left?
 
-Let's break it down:
+Let’s break it down:
 
-- The farmer starts with **17** sheep.
-- "All but 9 run away" means that **9 sheep remain**, because "all but 9" is the number of sheep that **run away**.
+- The farmer starts with **17 sheep**.
+- "All but 9 run away" means **17 - 9 = 8** sheep remain.
+- So, **8 sheep are still with the farmer**.
 
-So, if **9** sheep **stay**, then the number of sheep the farmer has left is:
+### Answer: **8**
 
-> **9**
-
-### Answer: **9** sheep. [end of text]
+This is a classic riddle that uses wordplay. The key is in the phrase "all but 9" — it doesn't mean "9 are left," but rather that **9 are gone**, so **17 - 9 = 8** remain. [end of text]
 
 ````
 

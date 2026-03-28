@@ -7,15 +7,19 @@
 | **llama-cli** | `/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli` |
 | **llama-cli version** |  |
 | **Model file** | `Qwen3-1.7B-Q4_K_M.gguf` |
-| **Backend** | vulkan (`ngl=999`) |
+| **Backend** | vulkan |
+| **Device selection** | `--device auto` |
+| **GPU layers** | `-ngl 999` |
 | **Thinking mode** | `no_think` (`--reasoning-budget 0`) |
 | **Max new tokens** | `-n 512` |
+| **Sampling flags** | `--temp 0.2 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.05 --presence-penalty 0.0` |
+| **Per-question timeout** | `300s` |
 | **Chat** | `--jinja`, `--single-turn` (each question: `-p` …) |
 
 ## Command line (same for every question; only `-p` changes)
 
 ````bash
-/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli -m /data/data/com.termux/files/home/models/Qwen3-1.7B-Q4_K_M.gguf --jinja --reasoning-budget 0 -ngl 999 -st -p \<prompt\> -n 512 --temp 0.5 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.10 --presence-penalty 0.3  </dev/null
+/data/data/com.termux/files/home/qvac-fabric-llm.cpp/build/bin/llama-cli -m /data/data/com.termux/files/home/models/Qwen3-1.7B-Q4_K_M.gguf --jinja --reasoning-budget 0 -ngl 999 -st -p \<prompt\> -n 512 --temp 0.2 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.05 --presence-penalty 0.0  </dev/null
 ````
 
 ---
@@ -40,38 +44,36 @@ assistant
 To find the **derivative** of the function:
 
 $$
-f(x) = x^3 + 2x^2 - 5x + 3,
+f(x) = x^3 + 2x^2 - 5x + 3
 $$
 
-we apply the **power rule** to each term.
+we apply the **power rule** for differentiation, which states:
+
+$$
+\frac{d}{dx} [x^n] = n x^{n-1}
+$$
 
 ---
 
 ### Step-by-step derivative:
 
-1. Derivative of $ x^3 $ is:
-   $$
-   \frac{d}{dx} (x^3) = 3x^2
-   $$
+$$
+f'(x) = \frac{d}{dx} (x^3 + 2x^2 - 5x + 3)
+$$
 
-2. Derivative of $ 2x^2 $ is:
-   $$
-   \frac{d}{dx} (2x^2) = 4x
-   $$
+Apply the power rule term by term:
 
-3. Derivative of $ -5x $ is:
-   $$
-   \frac{d}{dx} (-5x) = -5
-   $$
-
-4. The derivative of a constant (3) is **0**.
+- $\frac{d}{dx} x^3 = 3x^2$
+- $\frac{d}{dx} 2x^2 = 4x$
+- $\frac{d}{dx} (-5x) = -5$
+- $\frac{d}{dx} 3 = 0$
 
 ---
 
 ### Final Answer:
 
 $$
-f'(x) = 3x^2 + 4x - 5
+\boxed{f'(x) = 3x^2 + 4x - 5}
 $$ [end of text]
 
 ````
@@ -99,23 +101,23 @@ Certainly! Here's a Python function that checks if a string is a **palindrome**:
 def is_palindrome(s):
     # Remove any non-alphanumeric characters and convert to lowercase
     cleaned = ''.join(char.lower() for char in s if char.isalnum())
-    
     return cleaned == cleaned[::-1]
 ```
 
+### Explanation:
+- `char.lower()` converts the character to lowercase.
+- `char.isalnum()` keeps only alphanumeric characters (ignoring spaces, punctuation, etc.).
+- `cleaned == cleaned[::-1]` checks if the string is the same when reversed.
+
 ### Example usage:
+
 ```python
 print(is_palindrome("A man, a plan, a canal: Panama"))  # True
 print(is_palindrome("racecar"))                        # True
-print(is_palindrome("hello"))                          # False
+print(is_palindrome("hello"))                           # False
 ```
 
-### Explanation:
-- `char.lower()` converts characters to lowercase.
-- `isalnum()` keeps only alphanumeric characters (ignoring spaces, punctuation, etc.).
-- `cleaned == cleaned[::-1]` checks if the string is the same when reversed.
-
-Let me know if you want a version that handles case-insensitivity or ignores whitespace! [end of text]
+Let me know if you want to handle case-insensitivity or special characters differently! [end of text]
 
 ````
 
@@ -136,21 +138,15 @@ assistant
 
 </think>
 
-Let's break it down step by step.
+Let's break it down step by step:
 
-The farmer has **17 sheep**.
+- The farmer has **17 sheep**.
+- **All but 9** run away.  
+  This means **9 sheep** run away, and the rest (17 - 9 = 8) remain.
 
-> "All but 9 run away."
+So, the farmer has **8 sheep left**.
 
-This means **9 sheep run away**, and the rest (**17 - 9 = 8**) remain.
-
-So, the number of sheep left is:
-
-$$
-\boxed{8}
-$$
-
-✅ Final Answer: **8**. [end of text]
+✅ **Answer: 8** [end of text]
 
 ````
 
