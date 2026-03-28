@@ -7,15 +7,19 @@
 | **llama-cli** | `/home/arsalan/Workspace/tether/qvac-fabric-llm.cpp-arsalan/build/bin/llama-cli` |
 | **llama-cli version** |  |
 | **Model file** | `Qwen3-1.7B-Q4_K_M.gguf` |
-| **Backend** | cpu (`ngl=0`) |
+| **Backend** | cpu |
+| **Device selection** | `--device none` |
+| **GPU layers** | `-ngl 0` |
 | **Thinking mode** | `no_think` (`--reasoning-budget 0`) |
 | **Max new tokens** | `-n 512` |
+| **Sampling flags** | `--temp 0.2 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.05 --presence-penalty 0.0` |
+| **Per-question timeout** | `300s` |
 | **Chat** | `--jinja`, `--single-turn` (each question: `-p` …) |
 
 ## Command line (same for every question; only `-p` changes)
 
 ````bash
-/home/arsalan/Workspace/tether/qvac-fabric-llm.cpp-arsalan/build/bin/llama-cli -m models/custom/Qwen3-1.7B-Q4_K_M.gguf --jinja --reasoning-budget 0 -ngl 0 -st -p \<prompt\> -n 512 --temp 0.5 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.10 --presence-penalty 0.3  </dev/null
+/home/arsalan/Workspace/tether/qvac-fabric-llm.cpp-arsalan/build/bin/llama-cli -m models/custom/Qwen3-1.7B-Q4_K_M.gguf --jinja --device none --reasoning-budget 0 -ngl 0 -st -p \<prompt\> -n 512 --temp 0.2 --top-k 20 --top-p 0.9 --min-p 0 --repeat-penalty 1.05 --presence-penalty 0.0  </dev/null
 ````
 
 ---
@@ -37,34 +41,37 @@ assistant
 
 </think>
 
-To find the **derivative** of the polynomial:
+To find the **derivative** of the function:
 
 $$
-f(x) = x^3 + 2x^2 - 5x + 3,
+f(x) = x^3 + 2x^2 - 5x + 3
 $$
 
-we apply the **power rule** to each term.
+we apply the **power rule** to each term:
 
 ---
 
 ### Step-by-step derivative:
 
-1. Derivative of $ x^3 $ is:
+1. **Derivative of $ x^3 $:**
    $$
    \frac{d}{dx}(x^3) = 3x^2
    $$
 
-2. Derivative of $ 2x^2 $ is:
+2. **Derivative of $ 2x^2 $:**
    $$
    \frac{d}{dx}(2x^2) = 4x
    $$
 
-3. Derivative of $ -5x $ is:
+3. **Derivative of $ -5x $:**
    $$
    \frac{d}{dx}(-5x) = -5
    $$
 
-4. The derivative of a constant (like $ +3 $) is **0**.
+4. **Derivative of constant $ 3 $:**
+   $$
+   \frac{d}{dx}(3) = 0
+   $$
 
 ---
 
@@ -72,7 +79,9 @@ we apply the **power rule** to each term.
 
 $$
 f'(x) = 3x^2 + 4x - 5
-$$ [end of text]
+$$
+
+✅ **The derivative is** $ \boxed{3x^2 + 4x - 5} $. [end of text]
 
 ````
 
@@ -93,16 +102,19 @@ assistant
 
 </think>
 
-Certainly! Here's a Python function that checks whether a given string is a **palindrome**:
+Certainly! Here's a Python function that checks if a string is a **palindrome**:
 
 ```python
 def is_palindrome(s):
-    # Remove all non-alphanumeric characters and convert to lowercase
+    # Remove non-alphanumeric characters and convert to lowercase
     cleaned = ''.join([char.lower() for char in s if char.isalnum()])
-    
-    # Check if the cleaned string reads the same backward as forward
     return cleaned == cleaned[::-1]
 ```
+
+### Explanation:
+- `char.lower()` converts the string to lowercase.
+- `char.isalnum()` keeps only alphanumeric characters (ignoring spaces, punctuation, etc.).
+- `cleaned == cleaned[::-1]` checks if the cleaned string is the same when reversed.
 
 ### Example Usage:
 
@@ -110,15 +122,9 @@ def is_palindrome(s):
 print(is_palindrome("A man, a plan, a canal: Panama"))  # True
 print(is_palindrome("racecar"))                        # True
 print(is_palindrome("hello"))                          # False
-print(is_palindrome("12321"))                           # True
 ```
 
-### Explanation:
-- The function removes all non-alphanumeric characters.
-- It converts the string to lowercase to make the comparison case-insensitive.
-- It then checks if the cleaned string is equal to its reverse.
-
-Let me know if you'd like a version that handles different character encodings or includes additional features! [end of text]
+Let me know if you'd like to handle case sensitivity or other edge cases! [end of text]
 
 ````
 
@@ -141,13 +147,12 @@ assistant
 
 Let's break it down step by step:
 
-- The farmer starts with **17 sheep**.
-- "All but 9 run away" means **9 sheep run away**, and the rest (the ones that stay) are **17 - 9 = 8 sheep**.
+- The farmer has **17 sheep**.
+- **All but 9 run away** — this means **9 sheep run away**, and the rest (**17 - 9 = 8**) remain.
 
-So, the answer is:  
-**8 sheep remain.**
+So, the farmer has **8 sheep left**.
 
-✅ Final Answer: **8** [end of text]
+✅ **Answer: 8**. [end of text]
 
 ````
 
