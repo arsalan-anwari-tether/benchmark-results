@@ -1,0 +1,47 @@
+nohup: ignoring input
+==> cpu: Qwen3-1.7B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s22/inference/Qwen3-1.7B-Q4_K_M/cpu.json
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Samsung Xclipse 920 (Samsung Proprietary driver) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 32768 | int dot: 0 | matrix cores: none
+==> vulkan: Qwen3-1.7B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s22/inference/Qwen3-1.7B-Q4_K_M/vulkan.json
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Samsung Xclipse 920 (Samsung Proprietary driver) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 32768 | int dot: 0 | matrix cores: none
+==> logic cpu think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-1.7B-Q4_K_M.gguf (cpu think Q1) after 300s
+==> logic cpu think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-1.7B-Q4_K_M.gguf (cpu think Q2) after 300s
+==> logic cpu think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-1.7B-Q4_K_M.gguf (cpu think Q3) after 300s
+==> logic cpu no_think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu no_think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic cpu no_think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-1: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-2: Qwen3-1.7B-Q4_K_M.gguf
+==> logic vulkan no_think Question-3: Qwen3-1.7B-Q4_K_M.gguf
+==> cpu: Qwen3-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s22/inference/Qwen3-4B-Q4_K_M/cpu.json
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Samsung Xclipse 920 (Samsung Proprietary driver) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 32768 | int dot: 0 | matrix cores: none
+==> vulkan: Qwen3-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s22/inference/Qwen3-4B-Q4_K_M/vulkan.json
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Samsung Xclipse 920 (Samsung Proprietary driver) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 32768 | int dot: 0 | matrix cores: none
+==> logic cpu think Question-1: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-4B-Q4_K_M.gguf (cpu think Q1) after 300s
+==> logic cpu think Question-2: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-4B-Q4_K_M.gguf (cpu think Q2) after 300s
+==> logic cpu think Question-3: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-4B-Q4_K_M.gguf (cpu think Q3) after 300s
+==> logic cpu no_think Question-1: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-4B-Q4_K_M.gguf (cpu no_think Q1) after 300s
+==> logic cpu no_think Question-2: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-4B-Q4_K_M.gguf (cpu no_think Q2) after 300s
+==> logic cpu no_think Question-3: Qwen3-4B-Q4_K_M.gguf
+warning: llama-cli timed out for models/custom/Qwen3-4B-Q4_K_M.gguf (cpu no_think Q3) after 300s
+==> logic vulkan think Question-1: Qwen3-4B-Q4_K_M.gguf
+==> logic vulkan think Question-2: Qwen3-4B-Q4_K_M.gguf
+==> logic vulkan think Question-3: Qwen3-4B-Q4_K_M.gguf
+==> logic vulkan no_think Question-1: Qwen3-4B-Q4_K_M.gguf
+==> logic vulkan no_think Question-2: Qwen3-4B-Q4_K_M.gguf
+==> logic vulkan no_think Question-3: Qwen3-4B-Q4_K_M.gguf
+done with 9 failing run(s).
