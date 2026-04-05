@@ -1,38 +1,89 @@
 nohup: ignoring input
-==> cpu: Qwen3-1.7B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3-1.7B-Q4_K_M/cpu.json
+==> cpu: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/cpu.json
 ggml_vulkan: Found 1 Vulkan devices:
 ggml_vulkan: 0 = Mali-G715 (Mali-G715) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: KHR_coopmat
-==> vulkan: Qwen3-1.7B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3-1.7B-Q4_K_M/vulkan.json
+==> vulkan: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
 ggml_vulkan: Found 1 Vulkan devices:
 ggml_vulkan: 0 = Mali-G715 (Mali-G715) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: KHR_coopmat
-==> logic cpu think Question-1: Qwen3-1.7B-Q4_K_M.gguf
-==> logic cpu think Question-2: Qwen3-1.7B-Q4_K_M.gguf
-==> logic cpu think Question-3: Qwen3-1.7B-Q4_K_M.gguf
-==> logic cpu no_think Question-1: Qwen3-1.7B-Q4_K_M.gguf
-==> logic cpu no_think Question-2: Qwen3-1.7B-Q4_K_M.gguf
-==> logic cpu no_think Question-3: Qwen3-1.7B-Q4_K_M.gguf
-==> logic vulkan think Question-1: Qwen3-1.7B-Q4_K_M.gguf
-==> logic vulkan think Question-2: Qwen3-1.7B-Q4_K_M.gguf
-==> logic vulkan think Question-3: Qwen3-1.7B-Q4_K_M.gguf
-==> logic vulkan no_think Question-1: Qwen3-1.7B-Q4_K_M.gguf
-==> logic vulkan no_think Question-2: Qwen3-1.7B-Q4_K_M.gguf
-==> logic vulkan no_think Question-3: Qwen3-1.7B-Q4_K_M.gguf
-==> cpu: Qwen3-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3-4B-Q4_K_M/cpu.json
+/data/data/com.termux/files/home/llama.cpp/ggml/src/ggml-vulkan/ggml-vulkan.cpp:6510: GGML_ASSERT(ctx->descriptor_set_idx < ctx->descriptor_sets.size()) failed
+0: 0x7f21ec8b44 
+1: 0x7f21ec8b04 ggml_print_backtrace
+2: 0x7f21edc044 ggml_abort
+3: 0x7f2551ec94 
+4: 0x7f255005e4 
+5: 0x7f21ee413c ggml_backend_sched_graph_compute_async
+6: 0x7f2a06d534 _ZN13llama_context13graph_computeEP11ggml_cgraphb
+7: 0x7f2a06d1d0 _ZN13llama_context14process_ubatchERK12llama_ubatch14llm_graph_typeP22llama_memory_context_iR11ggml_status
+8: 0x7f2a06e690 _ZN13llama_context6decodeERK11llama_batch
+9: 0x7f2a072ac0 llama_decode
+10: 0x6317a08d64 
+11: 0x6317a04db8 
+12: 0x7f2cadc218 __libc_init
+./scripts/run_qwen3_benchmark.sh: line 193: 17926 Aborted                    "${cmd[@]}" > "$out_json"
+error: llama-bench failed for models/custom/Qwen3.5-4B-Q4_K_M.gguf (vulkan) model arch not supported!
+==> logic cpu think Question-1: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu think Question-2: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu think Question-3: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-1: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-2: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-3: Qwen3.5-4B-Q4_K_M.gguf
+==> logic vulkan think Question-1: Qwen3.5-4B-Q4_K_M.gguf
+==> logic vulkan think Question-2: Qwen3.5-4B-Q4_K_M.gguf
+==> logic vulkan think Question-3: Qwen3.5-4B-Q4_K_M.gguf
+==> logic vulkan no_think Question-1: Qwen3.5-4B-Q4_K_M.gguf
+==> logic vulkan no_think Question-2: Qwen3.5-4B-Q4_K_M.gguf
+==> logic vulkan no_think Question-3: Qwen3.5-4B-Q4_K_M.gguf
+done with 1 failing run(s).
+nohup: ignoring input
+==> cpu: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/cpu.json
 ggml_vulkan: Found 1 Vulkan devices:
 ggml_vulkan: 0 = Mali-G715 (Mali-G715) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: KHR_coopmat
-==> vulkan: Qwen3-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3-4B-Q4_K_M/vulkan.json
+==> vulkan: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
 ggml_vulkan: Found 1 Vulkan devices:
 ggml_vulkan: 0 = Mali-G715 (Mali-G715) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: KHR_coopmat
-==> logic cpu think Question-1: Qwen3-4B-Q4_K_M.gguf
-==> logic cpu think Question-2: Qwen3-4B-Q4_K_M.gguf
-==> logic cpu think Question-3: Qwen3-4B-Q4_K_M.gguf
-==> logic cpu no_think Question-1: Qwen3-4B-Q4_K_M.gguf
-==> logic cpu no_think Question-2: Qwen3-4B-Q4_K_M.gguf
-==> logic cpu no_think Question-3: Qwen3-4B-Q4_K_M.gguf
-==> logic vulkan think Question-1: Qwen3-4B-Q4_K_M.gguf
-==> logic vulkan think Question-2: Qwen3-4B-Q4_K_M.gguf
-==> logic vulkan think Question-3: Qwen3-4B-Q4_K_M.gguf
-==> logic vulkan no_think Question-1: Qwen3-4B-Q4_K_M.gguf
-==> logic vulkan no_think Question-2: Qwen3-4B-Q4_K_M.gguf
-==> logic vulkan no_think Question-3: Qwen3-4B-Q4_K_M.gguf
-selected benchmarks finished (mode=all).
+/data/data/com.termux/files/home/llama.cpp/ggml/src/ggml-vulkan/ggml-vulkan.cpp:6510: GGML_ASSERT(ctx->descriptor_set_idx < ctx->descriptor_sets.size()) failed
+0: 0x7eea895b44 
+1: 0x7eea895b04 ggml_print_backtrace
+2: 0x7eea8a9044 ggml_abort
+3: 0x7ee8362c94 
+4: 0x7ee83445e4 
+5: 0x7eea8b113c ggml_backend_sched_graph_compute_async
+6: 0x7eeaa16534 _ZN13llama_context13graph_computeEP11ggml_cgraphb
+7: 0x7eeaa161d0 _ZN13llama_context14process_ubatchERK12llama_ubatch14llm_graph_typeP22llama_memory_context_iR11ggml_status
+8: 0x7eeaa17690 _ZN13llama_context6decodeERK11llama_batch
+9: 0x7eeaa1bac0 llama_decode
+10: 0x617fc48d64 
+11: 0x617fc44db8 
+12: 0x7ee9a5d218 __libc_init
+./scripts/run_qwen3_benchmark.sh: line 193: 22893 Aborted                    "${cmd[@]}" > "$out_json"
+error: llama-bench failed for models/custom/Qwen3.5-4B-Q4_K_M.gguf (vulkan) model arch not supported!
+done with 1 failing run(s).
+nohup: ignoring input
+==> cpu: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/cpu.json
+==> vulkan: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
+./scripts/run_qwen3_benchmark.sh: line 193: 24687 Aborted                    "${cmd[@]}" > "$out_json" 2> "$tmp_stderr"
+error: llama-bench failed for models/custom/Qwen3.5-4B-Q4_K_M.gguf (vulkan) - Vulkan backend error (model may not be fully supported on this GPU)
+  Hint: Hybrid models (Qwen3.5, Mamba, etc.) may require GPU features not available on all devices.
+  Try running with CPU only: --bench-mode=inference -- --device none -ngl 0
+  Full error logged to: error.log
+  stderr: ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Mali-G715 (Mali-G715) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 16 | shared memory: 32768 | int dot: 1 | matrix cores: KHR_coopmat
+/data/data/com.termux/files/home/llama.cpp/ggml/src/ggml-vulkan/ggml-vulkan.cpp:6510: GGML_ASSERT(ctx->descriptor_set_idx < ctx->descriptor_sets.size()) failed
+0: 0x7891b07b44 
+1: 0x7891b07b04 ggml_print_backtrace
+2: 0x7891b1b044 ggml_abort
+3: 0x789112cc94 
+4: 0x789110e5e4 
+5: 0x7891b2313c ggml_backend_sched_graph
+done with 1 failing run(s).
+nohup: ignoring input
+nohup: failed to run command 'GGML_VK_DISABLE_COOPMAT=1': No such file or directory
+==> cpu: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/cpu.json
+==> vulkan: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
+selected benchmarks finished (mode=inference).
+note: Detected Mali (detected via vulkaninfo) - applying Vulkan workarounds for hybrid models
+  -> Set GGML_VK_DISABLE_COOPMAT=1 (override with GGML_VK_DISABLE_COOPMAT=0)
+  -> Set GGML_VK_DISABLE_GRAPH_OPTIMIZE=1 (override with GGML_VK_DISABLE_GRAPH_OPTIMIZE=0)
+==> cpu: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/cpu.json
+==> vulkan: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/pixel_9_pro/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
+selected benchmarks finished (mode=inference).
