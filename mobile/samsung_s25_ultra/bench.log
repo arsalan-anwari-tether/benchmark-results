@@ -1,0 +1,59 @@
+nohup: ignoring input
+note: Detected Adreno (detected via kgsl sysfs) - applying Vulkan workarounds for hybrid models
+  -> Set GGML_VK_DISABLE_ASYNC=1 (override with GGML_VK_DISABLE_ASYNC=0)
+  -> Set GGML_VK_DISABLE_GRAPH_OPTIMIZE=1 (override with GGML_VK_DISABLE_GRAPH_OPTIMIZE=0)
+==> cpu: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s25_ultra/inference/Qwen3.5-4B-Q4_K_M/cpu.json
+==> vulkan: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s25_ultra/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
+./scripts/run_qwen3_benchmark.sh: line 270: 14003 Aborted                    "${cmd[@]}" > "$out_json" 2> "$tmp_stderr"
+error: llama-bench failed for models/custom/Qwen3.5-4B-Q4_K_M.gguf (vulkan) - Vulkan backend error (model may not be fully supported on this GPU)
+  Hint: Hybrid models (Qwen3.5, Mamba, etc.) may require GPU features not available on all devices.
+  Try running with CPU only: --bench-mode=inference -- --device none -ngl 0
+  Full error logged to: error.log
+  stderr: ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Adreno (TM) 830 (Qualcomm Technologies Inc. Adreno Vulkan Driver) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 32768 | int dot: 1 | matrix cores: none
+0: 0x79c7c86b44 
+1: 0x79c7c86b04 ggml_print_backtrace
+2: 0x79c7c9a0b4 
+3: 0x79b2ef752c 
+4: 0x79b2f13ce4 __cxa_get_exception_ptr
+5: 0x79b2f13cc0 
+6: 0x79c3ec34b0 
+7: 0x79c3ecc774 
+8: 0x79c7ca213c ggml_backend_sched_graph_compute_async
+9: 0x79be99f534 _ZN13llama_context13graph_co
+done with 1 failing run(s).
+note: Detected Adreno (detected via kgsl sysfs) - applying Vulkan workarounds for hybrid models
+==> cpu: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s25_ultra/inference/Qwen3.5-4B-Q4_K_M/cpu.json
+==> vulkan: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s25_ultra/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
+./scripts/run_qwen3_benchmark.sh: line 270: 20094 Aborted                    "${cmd[@]}" > "$out_json" 2> "$tmp_stderr"
+error: llama-bench failed for models/custom/Qwen3.5-4B-Q4_K_M.gguf (vulkan) - Vulkan backend error (model may not be fully supported on this GPU)
+  Hint: Hybrid models (Qwen3.5, Mamba, etc.) may require GPU features not available on all devices.
+  Try running with CPU only: --bench-mode=inference -- --device none -ngl 0
+  Full error logged to: error.log
+  stderr: ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Adreno (TM) 830 (Qualcomm Technologies Inc. Adreno Vulkan Driver) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 32768 | int dot: 1 | matrix cores: none
+0: 0x75eef97b44 
+1: 0x75eef97b04 ggml_print_backtrace
+2: 0x75eefab0b4 
+3: 0x75f353f52c 
+4: 0x75f355bce4 __cxa_get_exception_ptr
+5: 0x75f355bcc0 
+6: 0x75f80a54b0 
+7: 0x75f80ae774 
+8: 0x75eefb313c ggml_backend_sched_graph_compute_async
+9: 0x75f910e534 _ZN13llama_context13graph_co
+done with 1 failing run(s).
+nohup: ignoring input
+note: Detected Adreno (detected via kgsl sysfs) - Vulkan not supported for hybrid models (Qwen3.5, etc.)
+  -> Vulkan benchmarks will be skipped for hybrid models (use SKIP_VULKAN_HYBRID=0 to override)
+note: Skipping Vulkan benchmarks for Qwen3.5-4B-Q4_K_M (hybrid model on adreno GPU)
+==> cpu: Qwen3.5-4B-Q4_K_M.gguf -> /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s25_ultra/inference/Qwen3.5-4B-Q4_K_M/cpu.json
+==> vulkan: Qwen3.5-4B-Q4_K_M SKIPPED (not supported on this GPU)
+==> logic cpu think Question-1: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu think Question-2: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu think Question-3: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-1: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-2: Qwen3.5-4B-Q4_K_M.gguf
+==> logic cpu no_think Question-3: Qwen3.5-4B-Q4_K_M.gguf
+==> vulkan logic: Qwen3.5-4B-Q4_K_M SKIPPED (not supported on this GPU)
+selected benchmarks finished (mode=all).

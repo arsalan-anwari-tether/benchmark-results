@@ -1,0 +1,78 @@
+========================================================================
+ERROR REPORT - 2026-04-05T12:35:29-07:00
+========================================================================
+Model: models/custom/Qwen3.5-4B-Q4_K_M.gguf
+Backend: vulkan
+Output file: /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s25_ultra/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
+Vulkan error detected: true
+
+Command:
+  /data/data/com.termux/files/home/llama.cpp/build/bin/llama-bench   -m   models/custom/Qwen3.5-4B-Q4_K_M.gguf   -p   256   -n   64   -r   2   -ngl   999   -o   json 
+
+Environment:
+  LLAMA_BENCH=/data/data/com.termux/files/home/llama.cpp/build/bin/llama-bench
+  BENCH_P=256 BENCH_N=64 BENCH_R=2
+  System: Linux localhost 6.6.30-android15-8-30455426-abogkiS938USQU1AYA1-4k #1 SMP PREEMPT Wed Jan  1 07:51:04 UTC 2025 aarch64 Android
+
+Full stderr output:
+------------------------------------------------------------------------
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Adreno (TM) 830 (Qualcomm Technologies Inc. Adreno Vulkan Driver) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 32768 | int dot: 1 | matrix cores: none
+0: 0x79c7c86b44 
+1: 0x79c7c86b04 ggml_print_backtrace
+2: 0x79c7c9a0b4 
+3: 0x79b2ef752c 
+4: 0x79b2f13ce4 __cxa_get_exception_ptr
+5: 0x79b2f13cc0 
+6: 0x79c3ec34b0 
+7: 0x79c3ecc774 
+8: 0x79c7ca213c ggml_backend_sched_graph_compute_async
+9: 0x79be99f534 _ZN13llama_context13graph_computeEP11ggml_cgraphb
+10: 0x79be99f1d0 _ZN13llama_context14process_ubatchERK12llama_ubatch14llm_graph_typeP22llama_memory_context_iR11ggml_status
+11: 0x79be9a0690 _ZN13llama_context6decodeERK11llama_batch
+12: 0x79be9a4ac0 llama_decode
+13: 0x5bd7b5cd64 
+14: 0x5bd7b58db8 
+15: 0x79c7ed9acc __libc_init
+libc++abi: terminating due to uncaught exception of type vk::DeviceLostError: vk::Queue::submit: ErrorDeviceLost
+------------------------------------------------------------------------
+
+========================================================================
+ERROR REPORT - 2026-04-05T12:49:21-07:00
+========================================================================
+Model: models/custom/Qwen3.5-4B-Q4_K_M.gguf
+Backend: vulkan
+Output file: /data/data/com.termux/files/home/benchmark-results/mobile/samsung_s25_ultra/inference/Qwen3.5-4B-Q4_K_M/vulkan.json
+Vulkan error detected: true
+
+Command:
+  /data/data/com.termux/files/home/llama.cpp/build/bin/llama-bench   -m   models/custom/Qwen3.5-4B-Q4_K_M.gguf   -p   256   -n   64   -r   2   -ngl   999   -o   json 
+
+Environment:
+  LLAMA_BENCH=/data/data/com.termux/files/home/llama.cpp/build/bin/llama-bench
+  BENCH_P=256 BENCH_N=64 BENCH_R=2
+  System: Linux localhost 6.6.30-android15-8-30455426-abogkiS938USQU1AYA1-4k #1 SMP PREEMPT Wed Jan  1 07:51:04 UTC 2025 aarch64 Android
+
+Full stderr output:
+------------------------------------------------------------------------
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Adreno (TM) 830 (Qualcomm Technologies Inc. Adreno Vulkan Driver) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 32768 | int dot: 1 | matrix cores: none
+0: 0x75eef97b44 
+1: 0x75eef97b04 ggml_print_backtrace
+2: 0x75eefab0b4 
+3: 0x75f353f52c 
+4: 0x75f355bce4 __cxa_get_exception_ptr
+5: 0x75f355bcc0 
+6: 0x75f80a54b0 
+7: 0x75f80ae774 
+8: 0x75eefb313c ggml_backend_sched_graph_compute_async
+9: 0x75f910e534 _ZN13llama_context13graph_computeEP11ggml_cgraphb
+10: 0x75f910e1d0 _ZN13llama_context14process_ubatchERK12llama_ubatch14llm_graph_typeP22llama_memory_context_iR11ggml_status
+11: 0x75f910f690 _ZN13llama_context6decodeERK11llama_batch
+12: 0x75f9113ac0 llama_decode
+13: 0x5c9df80d64 
+14: 0x5c9df7cdb8 
+15: 0x75e76e1acc __libc_init
+libc++abi: terminating due to uncaught exception of type vk::DeviceLostError: vk::Queue::submit: ErrorDeviceLost
+------------------------------------------------------------------------
+
